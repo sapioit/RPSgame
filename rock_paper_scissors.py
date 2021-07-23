@@ -6,7 +6,7 @@ computer_wins = 0
 options = ["rock", "paper", "scissors"]
 
 while True:
-    player_pick = input("Type Rock/Paper/Scissors or Q to quit: ").lower()
+    player_pick = input("Type R or Rock, P or Paper, S or Scissors or Q to quit: ").lower()
     if player_pick == "q":
         break
 
@@ -17,15 +17,15 @@ while True:
     computer_pick = options[random_number]
     print("Computer picked", computer_pick + ".")
 
-    if player_pick == "rock" and computer_pick == "scissors":
+    if (player_pick == "rock" or player_pick == "r") and computer_pick == "scissors":
         print("You won!")
         player_wins += 1
 
-    elif player_pick == "paper" and computer_pick == "rock":
+    elif (player_pick == "paper" or player_pick == "p") and computer_pick == "paper":
         print("You won!")
         player_wins += 1
 
-    elif player_pick == "scissors" and computer_pick == "paper":
+    elif (player_pick == "scissors" or player_pick == "s") and computer_pick == "paper":
         print("You won!")
         player_wins += 1
 
